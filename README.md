@@ -1,7 +1,5 @@
 ## DATE : 5 Oct, 2025
 
----
-
 ### FastAPI vs SpringBoot
 
 - in spring boot I used `Spring Initializr` to make the projects, add depenencies from there or maven vs for fastapi i can use direct `pip` to install `fastapi` in a normal project structure and use `uvicorn` to start the server
