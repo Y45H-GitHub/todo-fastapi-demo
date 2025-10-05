@@ -1,11 +1,12 @@
 from fastapi import FastAPI
+from app.db.database import Base, engine
+from app.routes.api import router
 
-app = FastAPI()
+# Create tables
+Base.metadata.create_all(bind=engine)
 
-@app.get("/")
-def root():
-    return {"message": "Hello FastAPI!"}
+# Create FastAPI app
+app = FastAPI(title="Todo API", version="1.0.0")
 
-@app.get("/api")
-def hello():
-    return {"message": "Hello API!"}
+# Include routers
+app.include_router(router, prefix="/api", tags=["todos"])
