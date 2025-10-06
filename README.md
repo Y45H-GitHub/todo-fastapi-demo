@@ -1,5 +1,3 @@
-from fastapi.routing import APIRoute
-
 ## DATE: 5 Oct, 2025
 
 ### FastAPI vs Spring Boot
